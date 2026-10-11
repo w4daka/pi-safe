@@ -18,6 +18,10 @@ exec bwrap \
   --ro-bind-try "${XDG_DATA_HOME:-$HOME/.local/share}/pi-node" \
   "${XDG_DATA_HOME:-$HOME/.local/share}/pi-node" \
   --ro-bind-try "$HOME/.gitconfig" "$HOME/.gitconfig" \
+  --ro-bind-try "$HOME/.config/nvim" "$HOME/.config/nvim" \
+  --bind-try "$HOME/.local/share/nvim" "$HOME/.local/share/nvim" \
+  --bind-try "$HOME/.local/state/nvim" "$HOME/.local/state/nvim" \
+  --bind-try "$HOME/.cache/nvim" "$HOME/.cache/nvim" \
   --unshare-pid --unshare-uts --unshare-ipc --die-with-parent --new-session \
   --clearenv \
   --setenv PATH "/usr/bin:/bin" \

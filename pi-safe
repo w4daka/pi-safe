@@ -6,7 +6,7 @@ exec bwrap \
   --ro-bind /usr /usr --symlink usr/bin /bin \
   --symlink usr/lib /lib --symlink usr/lib64 /lib64 \
   --ro-bind /etc /etc --proc /proc --dev /dev \
-  --tmpfs /tmp \
+  --bind /tmp /tmp\
   --ro-bind "$HOME/.pi/agent/npm" "$HOME/.pi/agent/npm" \
   --ro-bind-try "$HOME/.pi/agent/auth.json" "$HOME/.pi/agent/auth.json" \
   --ro-bind-try "$HOME/.pi/agent/settings.json" "$HOME/.pi/agent/settings.json" \
